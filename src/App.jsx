@@ -18,6 +18,7 @@ import {
   LucideLayers,
   LucideCreditCard,
 } from "lucide-react";
+import LiveChat from "./components/ui/LiveChat";
 
 const sections = [
   { id: "hero", label: "Home", icon: <LucideHome size={16} /> },
@@ -91,7 +92,8 @@ export default function DigitalMarketingLandingPage() {
 
       <div className="pt-20">
         {/* Hero Section */}
-        <Hero />
+          <Hero />
+          <LiveChat />
 
         {/* Services Section */}
         <Services />
