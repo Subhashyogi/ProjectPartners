@@ -1,24 +1,26 @@
-import { LucideCreditCard, LucideHome, LucideLayers, LucideMenu, LucidePhone, LucideUsers, LucideX } from 'lucide-react';
-import React, { useState } from 'react';
+import { LucideBriefcase, LucideCreditCard, LucideHome, LucideLayers, LucideMenu, LucidePhone, LucideUsers, LucideX } from 'lucide-react';
+import { useState } from 'react';
 
 
 const sections = [
     { id: "hero", label: "Home", icon: <LucideHome size={16} /> },
     { id: "services", label: "Services", icon: <LucideLayers size={16} /> },
     { id: "pricing", label: "Pricing", icon: <LucideCreditCard size={16} /> },
+    { id: "portfolio", label: "Portfolio", icon: <LucideBriefcase size={16} /> },
     { id: "testimonials", label: "Testimonials", icon: <LucideUsers size={16} /> },
     { id: "contact", label: "Contact", icon: <LucidePhone size={16} /> },
   ];
-const NavBar = () => {
+const NavBar = ({ activeSection, setActiveSection }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState("hero");
+    // const [activeSection, setActiveSection] = useState("hero");
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     
       const handleNavClick = (e, id) => {
         e.preventDefault();
         const section = document.getElementById(id);
         if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
+            section.scrollIntoView({ behavior: "smooth" });
+            setActiveSection(id);
           setIsMenuOpen(false);
         }
       };

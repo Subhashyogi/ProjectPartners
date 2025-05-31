@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
+import "keen-slider/keen-slider.min.css";
+import "./index.css"; // Your Tailwind setup
+
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

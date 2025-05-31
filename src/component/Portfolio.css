@@ -1,0 +1,14 @@
+/* Portfolio.css */
+
+.portfolio-swiper {
+    padding-bottom: 2rem; /* adds spacing below the pagination dots */
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #a855f7; /* custom pagination bullet color (purple) */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #7e22ce; /* darker purple when active */
+  }
+  

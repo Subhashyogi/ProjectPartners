@@ -19,7 +19,7 @@ const Pricing = () => {
             data-aos="fade-left"
         >
             <h2 className="text-3xl font-bold mb-12">Pricing Plans</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-down" data-aos-delay="100">
                 {/* Starter Plan */}
                 <Card
                     // data-aos="fade-right" data-aos-delay="100"

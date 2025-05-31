@@ -10,14 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
     "@tailwindcss/vite": "^4.1.8",
     "aos": "^2.3.4",
     "classnames": "^2.5.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.15.0",
+    "keen-slider": "^6.8.6",
     "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "^7.56.4",
     "react-hot-toast": "^2.5.2",
     "swiper": "^11.2.8",

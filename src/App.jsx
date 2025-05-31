@@ -1,5 +1,9 @@
 
 import React, { useState, useEffect } from "react";
+import "keen-slider/keen-slider.min.css";
+import "./index.css"; // Your Tailwind setup
+import { Helmet } from "react-helmet";
+
 import TestimonialsCarousel from "./component/TestimonialsCarousel";
 import { FAQSection } from "./component/FAQSection";
 import { ContactForm } from "./component/ContactForm";
@@ -17,20 +21,23 @@ import {
   LucideUsers,
   LucideLayers,
   LucideCreditCard,
+  LucideBriefcase,
 } from "lucide-react";
 import LiveChat from "./ui/LiveChat";
+import Portfolio from "./component/Portfolio";
 
 const sections = [
   { id: "hero", label: "Home", icon: <LucideHome size={16} /> },
   { id: "services", label: "Services", icon: <LucideLayers size={16} /> },
   { id: "pricing", label: "Pricing", icon: <LucideCreditCard size={16} /> },
+  { id: "portfolio", label: "Portfolio", icon: <LucideBriefcase size={16} /> },
   { id: "testimonials", label: "Testimonials", icon: <LucideUsers size={16} /> },
   { id: "contact", label: "Contact", icon: <LucidePhone size={16} /> },
 ];
 
 
 
-export default function DigitalMarketingLandingPage() {
+export default function App() {
   
   const [activeSection, setActiveSection] = useState("hero");
   
@@ -86,9 +93,22 @@ export default function DigitalMarketingLandingPage() {
   return (
     <>
       <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
+      <Helmet>
+        <title>Project Partners - Digital Marketing & Web Development</title>
+        <meta name="description" content="Project Partners offers cutting-edge digital marketing and web development solutions tailored for your business growth." />
+        <meta property="og:title" content="Project Partners - Digital Marketing & Web Development" />
+        <meta property="og:description" content="Empowering your brand with tailored marketing and web solutions." />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:url" content="https://projectpartners.netlify.app" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Project Partners - Digital Marketing & Web Development" />
+        <meta name="twitter:description" content="Empowering your brand with tailored marketing and web solutions." />
+        <meta name="twitter:image" content="/og-image.png" />
+      </Helmet>
     <div className="bg-white text-gray-900 scroll-smooth">
       {/* Navbar */}
-      <NavBar />
+        <NavBar activeSection={activeSection} setActiveSection={setActiveSection} />
 
       <div className="pt-20">
         {/* Hero Section */}
@@ -100,7 +120,8 @@ export default function DigitalMarketingLandingPage() {
 
         {/* Pricing Section */}
         <Pricing />
-          
+          {/*Protfolio Section */}
+          <Portfolio />
         {/* Achievements Section */}
         <Achievements />
       
