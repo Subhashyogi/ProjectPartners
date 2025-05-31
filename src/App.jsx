@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from "react";
-import TestimonialsCarousel from "./components/component/TestimonialsCarousel";
-import { FAQSection } from "./components/component/FAQSection";
-import { ContactForm } from "./components/component/ContactForm";
-import NavBar from "./components/component/NavBar";
-import Hero from "./components/component/Hero";
-import Services from "./components/component/Services";
-import Pricing from "./components/component/Pricing";
-import Achievements from "./components/component/Achievements";
+import TestimonialsCarousel from "./component/TestimonialsCarousel";
+import { FAQSection } from "./component/FAQSection";
+import { ContactForm } from "./component/ContactForm";
+import NavBar from "./component/NavBar";
+import Hero from "./component/Hero";
+import Services from "./component/Services";
+import Pricing from "./component/Pricing";
+import Achievements from "./component/Achievements";
 import { Toaster } from "react-hot-toast";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,7 +18,7 @@ import {
   LucideLayers,
   LucideCreditCard,
 } from "lucide-react";
-import LiveChat from "./components/ui/LiveChat";
+import LiveChat from "./ui/LiveChat";
 
 const sections = [
   { id: "hero", label: "Home", icon: <LucideHome size={16} /> },
